@@ -1,0 +1,174 @@
+
+<head>
+	<title>Donation Goal</title>
+	<style>
+		body {
+			background-color: black;
+			color: white;
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		h1 {
+			text-align: center;
+			margin-top: 30px;
+		}
+
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin-top: 30px;
+			padding: 10px;
+			box-sizing: border-box;
+		}
+		.box {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin: 10px;
+		padding: 20px;
+		background-color: #fff;
+		border-radius: 5px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+		text-align: center;
+		}
+
+		.box .content {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.box .description {
+			display: none;
+			margin-top: 10px;
+			line-height: 1.5;
+			text-align: center;
+		}
+
+		.box .btn-donate {
+			margin-top: 10px;
+			padding: 10px 20px;
+			background-color: #2980b9;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+
+		.box .btn-donate:hover {
+			background-color: #1b4f72;
+		}
+
+		.box {
+			width: 250px;
+			height: 250px;
+			background-color: #2c3e50;
+			margin: 20px;
+			padding: 20px;
+			box-sizing: border-box;
+			border: 5px solid black;
+			position: relative;
+			transition: all 0.3s ease-in-out;
+			
+		}
+
+		.box:hover {
+			transform: translateY(-10px);
+			box-shadow: 0 0 10px white;
+		}
+
+		.box.active {
+			height: auto;
+		}
+
+		.box.active .description {
+			display: block;
+		}
+
+		.description {
+			display: none;
+			margin-top: 10px;
+			line-height: 1.5;
+		}
+
+		.donate-button {
+			background-color: #4CAF50;
+			color: white;
+			padding: 10px;
+			border: none;
+			border-radius: 5px;
+			font-size: 16px;
+			cursor: pointer;
+			margin-top: 10px;
+		}
+
+		.donate-button:hover {
+			background-color: #3e8e41;
+		}
+	</style>
+</head>
+<body>
+	<h1>Donation Goal</h1>
+
+	<div class="container">
+		<div class="box">
+			<h2>Premier palier</h2>
+			<p>10€</p>
+			<div class="description">
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate veniam, expedita harum, id aliquam est ea illo saepe aspernatur ipsum officiis libero voluptas repellendus minus impedit delectus, incidunt quod dolorum..</p>
+				<button class="donate-button">Donate</button>
+			</div>
+		</div>
+
+		<div class="box">
+			<h2>Deuxième palier</h2>
+			<p>20€</p>
+			<div class="description">
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga iusto dolorum asperiores omnis quia esse veritatis autem nobis aliquid, ullam optio tempora, minus voluptas quos, dolores reprehenderit possimus eaque! Nemo?</p>
+				<button class="donate-button">Donate</button>
+			</div>
+		</div>
+
+		<div class="box">
+			<h2>Troisième palier</h2>
+			<p>50€</p>
+			<div class="description">
+				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error, accusantium. Maxime autem praesentium delectus libero quis consequuntur, laborum esse, recusandae ipsa placeat molestiae, ex necessitatibus molestias soluta quia! Placeat, laudantium!</p>
+				<button class="donate-button">Donate</button>
+			</div>
+		</div>
+
+		<div class="box">
+			<h2>Quatrième palier</h2>
+			<p>100€</p>
+			<div class="description">
+				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto sapiente inventore at cupiditate deserunt alias doloremque incidunt expedita optio quidem ipsa consequuntur quae, magnam consequatur totam delectus exercitationem deleniti eligendi?</p>
+				<button class="donate-button">Donate</button>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		const boxes = document.querySelectorAll('.box');
+
+boxes.forEach(box => {
+	box.addEventListener('click', () => {
+		boxes.forEach(box => {
+			box.classList.remove('active');
+		});
+		box.classList.add('active');
+	});
+});
+	</script>
+</body>
+</html>
+
